@@ -43,3 +43,16 @@ Taslaklar EEVEE ile, final render Cycles + OptiX ile, gece boyunca.
 - Görseller konsept ve sunum amaçlıdır. Statik, elektrik ve tesisat uygulama projeleri lisanslı mühendis imzası gerektirir.
 - İETT/İBB logosu kullanılmaz; yer tutucu konur.
 - Otobüs modeli markasızdır, Blender'da üretilir (telif riski yok).
+
+## 2.5 Disk alanı
+
+| Dosya | Boyut |
+|---|---|
+| Final video karesi (1080p PNG, 8-bit) | ~2–4 MB/kare |
+| 90 sn × 30 fps = 2.700 kare | ~5–10 GB (geçici) |
+| Final MP4 (H.264) | ~100–200 MB |
+| `.blend` sahne dosyaları + dokular | ~0,5–1 GB |
+| Taslak render'lar (EEVEE, düşük çözünürlük) | ~1–2 GB |
+
+En yoğun anda ~10–15 GB boş alan gerekir. Kareler MP4'e dönüştürülüp kontrol edildikten sonra silinir; kalıcı olarak ~1–2 GB kalır.
+OneDrive klasöründe çalışılıyorsa render sırasında eşitlemeyi duraklat.

@@ -31,5 +31,5 @@
 
 ## 3.3 Açık noktalar
 
-- Saha videosu: ilk gönderilen `.mov` dosyası 0,46 saniyelik ve **sadece ses** içeriyor, görüntü yok. Video yeniden `data/site/video/` klasörüne konmalı.
+- Saha videosu: gönderilen `.mov` dosyası 0,5 sn, 480×368, 15 karelik bir iPhone Live Photo klibi. Yedek parça cephesini (fotoğraf 03 ile aynı açı) gösteriyor. Daha uzun bir saha turu videosu çekilirse `data/site/video/` klasörüne konmalı ve `video-analiz` skill'i ile incelenmeli.
 - Hangarın ölçüleri (uzunluk, genişlik, mahya yüksekliği) şimdilik fotoğraflardan tahmin edilecek; ölçüm gelirse güncellenir.
