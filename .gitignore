@@ -1,0 +1,21 @@
+# Blender
+*.blend1
+*.blend2
+__pycache__/
+*.pyc
+
+# Büyük çıktılar
+renders/**
+!renders/.gitkeep
+video/**
+!video/.gitkeep
+data/site/video/*.mov
+data/site/video/*.mp4
+data/site/video/frames/
+
+# Ortam
+.venv/
+.env
+Thumbs.db
+desktop.ini
+.DS_Store

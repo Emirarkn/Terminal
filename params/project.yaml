@@ -1,0 +1,92 @@
+# Topkapı Elektrikli Otobüs Garajı: tek parametre kaynağı
+# Hesaplar, Blender sahnesi, render ve video bu dosyadan beslenir.
+# "varsayim: true" olan değerler kullanıcı onayı / saha verisiyle güncellenecek.
+
+proje:
+  ad: "Topkapı Elektrikli Otobüs Garajı"
+  hedef: "İETT/İBB sunumu"
+  dil: tr
+  logo_kullanimi: false        # logo yerine yer tutucu
+
+saha:
+  konum: "İETT Topkapı Garajı, İstanbul"
+  toplam_alan_m2: 15000
+  kapali_alan_m2: 5000
+  acik_alan_m2: 10000
+  parsel_siniri: null          # data/site/parsel.geojson (uydu görüntüsünden çizilecek)
+  kuzey_yonu_derece: null      # fotoğraf + uydu eşleştirmesiyle belirlenecek
+  yillik_yagis_mm: 680         # İstanbul Avrupa yakası, varsayim
+  varsayim: true
+
+filo:
+  otobus_sayisi: 100
+  tip: "12 m solo, jenerik, İETT renkleri"
+  uzunluk_m: 12.0
+  genislik_m: 2.55
+  yukseklik_m: 3.4             # çatı bataryası dahil
+  menzil_km: [300, 400]
+  batarya_kwh: 450
+  tuketim_kwh_km: 1.2
+  gunluk_km: 250
+
+sarj:
+  kabin_sayisi: 15
+  kabin_gucu_kw: 360
+  soket_sayisi: 100
+  kapali_alanda_sarj_otobus: 10
+  acik_alanda_sarj_otobus: 90
+  genisleme_kapasitesi_kabin: 20
+  protokol: "OCPP 2.0.1"
+  gece_sarj_penceresi: ["23:30", "05:30"]
+
+sebeke:
+  baglanti_gucu_mw: 5.0
+  gerilim_kv: 34.5
+  dagitim_sirketi: "BEDAŞ"
+  trafo: { adet: 3, guc_kva: 2500 }
+  bina_yukleri_kw: 300         # varsayim
+  bess_mwh: 2.0
+  bess_guc_mw: 1.0
+
+gunes:
+  hangar_cati_m2: 5000
+  hangar_kullanim_orani: 0.65
+  panel_catisi_m2: 6000
+  panel_catisi_serbest_yukseklik_m: 5.5
+  modul_w_m2: 230
+  ozgul_uretim_kwh_kwp: 1250   # varsayim, pvlib/PVGIS ile doğrulanacak
+
+yagmur_suyu:
+  toplama_alani_m2: 11000      # hangar çatısı + panel çatısı
+  akis_katsayisi: 0.85
+  depo_m3: 400
+  kullanim: ["açık yıkama ünitesi", "WC", "peyzaj sulama"]
+  yikama_temiz_su_l_otobus: 200
+  hangar_drenaj: "sifonik"
+  tasarim_yagis_siddeti_l_s_m2: 0.03
+
+yerlesim:
+  acik_park: { serit: 20, serit_basina_otobus: 5, serit_genisligi_m: 4.0 }
+  yikama_unitesi: "girişte, açık"
+  idari_binalar: "mevcut tek katlı bina korunur"
+  personel_otoparki_arac: 40   # varsayim
+  trafo_ve_bess_konumu: "konutlardan en uzak köşe, akustik perde arkasında"
+  hangar: "korunur ve yenilenir (siluet + cephe yazısı)"
+
+kapali_alan_programi:
+  - "bakım-onarım ve yüksek gerilim atölyesi"
+  - "10 otobüslük iç şarj bölümü (yangın duvarı, sprinkler, termal kamera, tahliye yolu)"
+  - "yedek parça ve batarya deposu"
+
+finans:                        # gösterge niteliğinde, EUR
+  para_birimi: EUR
+  dizel_l_100km: 45
+  dizel_fiyat_l: 1.15
+  elektrik_fiyat_kwh: 0.13
+  sebeke_emisyon_t_mwh: 0.45
+  dizel_emisyon_kg_l: 2.68
+
+cikti:
+  video: { sure_sn: [60, 90], cozunurluk: [1920, 1080], fps: 30 }
+  stil: "fotoğerçekçi + diyagram"
+  render_motoru: { final: "CYCLES", taslak: "BLENDER_EEVEE_NEXT", cihaz: "OPTIX" }
