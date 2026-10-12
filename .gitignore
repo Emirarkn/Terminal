@@ -7,8 +7,6 @@ __pycache__/
 # Büyük çıktılar
 renders/**
 !renders/.gitkeep
-video/**
-!video/.gitkeep
 data/site/video/*.mov
 data/site/video/*.mp4
 data/site/video/frames/

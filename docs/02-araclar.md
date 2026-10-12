@@ -10,21 +10,20 @@ Karar: **tamamen ücretsiz araç zinciri**, çalışma ortamı VS Code.
 | Blender (güncel LTS) + resmi Blender bağlantısı | 3D model, görünüşler, render, animasyon | Ücretsiz, ticari kullanım dahil |
 | Python 3.11+ (pvlib, numpy, pyyaml, matplotlib) | Enerji, güneş, yağmur suyu, finans hesapları | Ücretsiz |
 | fSpy | Fotoğraflara kamera eşleme (öncesi/sonrası) | Ücretsiz |
-| ffmpeg | Kareleri videoya dönüştürme, montaj | Ücretsiz |
+| ffmpeg (isteğe bağlı) | Saha videosundan kare çıkarma | Ücretsiz |
 | Git | Sürüm kontrolü | Ücretsiz |
 | PVGIS (AB JRC) | Güneş üretim verisi | Ücretsiz |
 | Poly Haven | Gökyüzü ışık haritaları, dokular, ağaçlar | Ücretsiz (CC0) |
-| DaVinci Resolve (isteğe bağlı) | Video kurgu, renk düzenleme | Ücretsiz |
 
-Kullanılmayacaklar: Fusion, SketchUp, Adobe (ücretli). Gerekirse ileride eklenebilir.
+Kullanılmayacaklar: Fusion, SketchUp, Adobe (ücretli). Animasyon videosu kapsam dışı olduğu için video kurgu aracı da gerekmez.
 
 ## 2.2 Kurulum (Windows)
 
 1. **VS Code** → Extensions → **Claude Code** (Anthropic) → aynı Claude hesabıyla giriş.
-2. **Git:** https://git-scm.com
+2. **Git:** PowerShell'de `winget install --id Git.Git -e --source winget`, sonra VS Code'u kapatıp yeniden aç
 3. **Python 3.11+:** https://python.org (kurulumda "Add to PATH" işaretli)
 4. **Blender LTS:** https://blender.org → Claude ayarlarından Blender bağlantısını etkinleştir.
-5. **ffmpeg:** PowerShell'de `winget install Gyan.FFmpeg`
+5. **ffmpeg (isteğe bağlı):** PowerShell'de `winget install Gyan.FFmpeg`
 6. **fSpy:** https://fspy.io
 7. Python paketleri (repo klasöründe):
    ```
@@ -36,7 +35,7 @@ Kullanılmayacaklar: Fusion, SketchUp, Adobe (ücretli). Gerekirse ileride eklen
 ## 2.3 Donanım
 
 Windows + NVIDIA ekran kartı. Blender'da: Edit → Preferences → System → Cycles Render Devices → **OptiX**.
-Taslaklar EEVEE ile, final render Cycles + OptiX ile, gece boyunca.
+Taslaklar EEVEE ile, final render'lar Cycles + OptiX ile (görsel başına birkaç dakika).
 
 ## 2.4 Sınırlar
 
@@ -46,13 +45,4 @@ Taslaklar EEVEE ile, final render Cycles + OptiX ile, gece boyunca.
 
 ## 2.5 Disk alanı
 
-| Dosya | Boyut |
-|---|---|
-| Final video karesi (1080p PNG, 8-bit) | ~2–4 MB/kare |
-| 90 sn × 30 fps = 2.700 kare | ~5–10 GB (geçici) |
-| Final MP4 (H.264) | ~100–200 MB |
-| `.blend` sahne dosyaları + dokular | ~0,5–1 GB |
-| Taslak render'lar (EEVEE, düşük çözünürlük) | ~1–2 GB |
-
-En yoğun anda ~10–15 GB boş alan gerekir. Kareler MP4'e dönüştürülüp kontrol edildikten sonra silinir; kalıcı olarak ~1–2 GB kalır.
-OneDrive klasöründe çalışılıyorsa render sırasında eşitlemeyi duraklat.
+Video olmadığı için toplam ~2–3 GB yeter: `.blend` sahne dosyaları ve dokular ~0,5–1 GB, 4K render'lar (~20–30 görsel × ~20 MB) ~0,5 GB, taslaklar ~0,5 GB.

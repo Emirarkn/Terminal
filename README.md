@@ -1,6 +1,6 @@
 # Topkapı Elektrikli Otobüs Garajı
 
-İETT Topkapı garajının 100 araçlık elektrikli otobüs garajına dönüştürülmesi için konsept tasarım, 3D model, render ve tanıtım videosu projesi. Hedef: İETT/İBB sunumu.
+İETT Topkapı garajının 100 araçlık elektrikli otobüs garajına dönüştürülmesi için konsept tasarım, 3D model ve render projesi. Animasyon videosu kapsam dışı. Hedef: İETT/İBB sunumu.
 
 | | |
 |---|---|
@@ -29,6 +29,5 @@ data/site/            saha fotoğrafları, video, parsel sınırı, fSpy dosyala
 blender/              sahne üretim scriptleri ve asset'ler
 exports/              .glb / .fbx / .obj dışa aktarımları
 renders/              render çıktıları (git'e girmez)
-video/                video kareleri ve montaj (git'e girmez)
 docs/                 iş planı ve proje dokümanları
 ```

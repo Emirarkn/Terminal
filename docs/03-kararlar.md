@@ -4,7 +4,7 @@
 
 | Konu | Karar |
 |---|---|
-| Araçlar | Ücretsiz: VS Code + Claude Code, Blender, Python, fSpy, ffmpeg (isteğe bağlı DaVinci Resolve) |
+| Araçlar | Ücretsiz: VS Code + Claude Code, Blender, Python, fSpy |
 | Bilgisayar | Windows + NVIDIA; final render kullanıcının bilgisayarında |
 | Hangar | Korunur ve yenilenir (siluet + cephe yazısı) |
 | Şarj | 15 × 360 kW kabin, ~100 soket; 10 otobüs kapalı alanda, ~90 açık alanda; 20 kabine genişleyebilir |
@@ -14,15 +14,15 @@
 | Parsel | Uydu görüntüsünden Claude çizer, kullanıcı onaylar |
 | Hedef | İETT/İBB sunumu: kurumsal, teknik, ikna edici |
 | Görsel stil | Fotogerçekçi render + enerji/su akışı diyagramları |
-| Video | 60–90 sn, 1080p yatay, 30 fps |
+| Video | **Kapsam dışı.** Sadece durağan görseller ve paftalar (4K) |
 | Dil | Türkçe |
 | Otobüs | Markasız 12 m solo, İETT renklerinde |
 | Logo | Kullanılmaz, yer tutucu |
-| Takvim | 1–2 hafta |
+| Takvim | ~1 hafta |
 
 ## 3.2 Claude'un varsayımları (kullanıcı itiraz etmedikçe geçerli)
 
-- İç şarj bölümü: yangın duvarıyla ayrılmış, sprinkler, termal kamera, acil tahliye yolu. Videoda kısaca gösterilir.
+- İç şarj bölümü: yangın duvarıyla ayrılmış, sprinkler, termal kamera, acil tahliye yolu. Kesit görselinde gösterilir.
 - Personel otoparkı ~40 araç.
 - Mevcut tek katlı idari bina korunur.
 - Yıkama ünitesi girişte, otobüsün giriş rotası üzerinde.

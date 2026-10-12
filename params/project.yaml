@@ -1,5 +1,5 @@
 # Topkapı Elektrikli Otobüs Garajı: tek parametre kaynağı
-# Hesaplar, Blender sahnesi, render ve video bu dosyadan beslenir.
+# Hesaplar, Blender sahnesi, ve render'lar bu dosyadan beslenir.
 # "varsayim: true" olan değerler kullanıcı onayı / saha verisiyle güncellenecek.
 
 proje:
@@ -87,6 +87,7 @@ finans:                        # gösterge niteliğinde, EUR
   dizel_emisyon_kg_l: 2.68
 
 cikti:
-  video: { sure_sn: [60, 90], cozunurluk: [1920, 1080], fps: 30 }
+  video: null                  # kapsam dışı (kullanıcı kararı)
+  gorsel_cozunurluk: [3840, 2160]   # durağan render'lar 4K
   stil: "fotoğerçekçi + diyagram"
   render_motoru: { final: "CYCLES", taslak: "BLENDER_EEVEE_NEXT", cihaz: "OPTIX" }
